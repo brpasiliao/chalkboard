@@ -1,12 +1,12 @@
 # Sketches for Chalkboard
 
-##Sitemap:
+## Sitemap:
 ![Chalkboard sitemap](https://raw.githubusercontent.com/brpasiliao/chalkboard/master/sketches/sitemap.jpg)
 
-##Desktop Wireframes:
+## Desktop Wireframes:
 ![Chalkboard wireframes for desktop](https://raw.githubusercontent.com/brpasiliao/chalkboard/master/sketches/desktop_wireframes.jpg)
 
-##Mobile Wireframes:
+## Mobile Wireframes:
 ![Chalkboard wireframes for mobile](https://raw.githubusercontent.com/brpasiliao/chalkboard/master/sketches/mobile_wireframes.jpg)
 
 ## What I Learned:
