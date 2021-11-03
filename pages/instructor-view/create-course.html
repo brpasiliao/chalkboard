@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Create a Course</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../styles/styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav id="main-nav">
+      <a href="home.html">
+        <img src="../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+      </a>
+    </nav>
+
+    <div class="main-margin">
+      <header>
+        <h1>Create a Course</h1>
+      </header>
+
+      <section id="create-course">
+        <p>
+          <label for="course-name">Course Name:
+            <input id="course-name" type="text" name="course" placeholder="CRS 101">
+          </label>
+        </p>
+        <p>
+          <label for="section">Section Number:
+            <input id="section" type="text" name="course" value="1">
+          </label>
+        </p>
+        <!-- date and time -->
+        <p>
+          <label for="day">Day:
+            <select id="day" name="day">
+              <option value="Sunday">Sunday</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+            </select>
+          </label>
+          <label for="from">Time:
+            <input id="from" type="time" name="from"> - <input id="to" type="time" name="to">
+          </label>
+        </p>
+        <a href="#">Add time</a>
+        <p>
+          <label for="description">Course Description: <br>
+            <textarea id="description" name="description" placeholder="Description"></textarea>
+          </label>
+        </p>
+
+        <a href="home.html">Create Course</a>
+      </section>
+
+    </div>
+  </body>
+</html>

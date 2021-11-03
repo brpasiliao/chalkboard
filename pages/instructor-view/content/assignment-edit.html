@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Edit Assignment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../styles/styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav id="main-nav">
+      <a class="nav-section" href="../profile-user.html">
+        <img src="../../../images/userIcon.jpg" alt="User's profile picture">
+        <p>User Name</p>
+      </a>
+      <a href="../home.html">
+        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+      </a>
+      <div class="nav-section">
+        <select name="coursesDropdown">
+          <option value="CRS 101">CRS 101</option>
+          <option value="CRS 102">CRS 102</option>
+        </select>
+        <a href="../profile-course.html">
+          <img src="../../../images/infoIcon.jpg" alt="View course information">
+        </a>
+      </div>
+    </nav>
+
+    <div class="main-margin">
+      <nav id="course-nav">
+        <a class="nav-section" href="content.html">
+          <img src="../../../images/contentIcon.jpg" alt="Contents">
+          <p>Contents</p>
+        </a>
+        <a class="nav-section" href="../instructors/instructors.html">
+          <img src="../../../images/instructorIcon.jpg" alt="Instructors">
+          <p>Instructors</p>
+        </a>
+        <a class="nav-section" href="../students/students.html">
+          <img src="../../../images/studentIcon.jpg" alt="Students">
+          <p>Students</p>
+        </a>
+      </nav>
+
+      <header>
+        <a class="header-section mini" href="assignment-view.html">
+          <img src="../../../images/backIcon.jpg" alt="Go back">
+        </a>
+        <div class="header-section">
+          <img src="../../../images/documentIcon.jpg" alt="View materials">
+          <h1>Edit Assignment Name</h1>
+        </div>
+      </header>
+
+      <section id="assignment-edit">
+        <p>
+          <label for="assignmentName">Assignment name:
+            <input id="materialName" type="text" name="materialName" value="Assignment Name">
+          </label>
+        </p>
+        <p>
+          <label for="dueDate">Due Date:
+            <input id="dueDate" type="date" name="dueDate">
+          </label>
+        </p>
+        <ol>
+          <li>
+            <textarea name="ans2">How many inches are there in a foot?</textarea>
+            <input id="ans1" type="text" name="ans1" value="12">
+          </li>
+          <li>
+            <textarea name="ans2">How many centimeters are there in a meter?</textarea>
+            <input id="ans2" type="text" name="ans2" value="100">
+          </li>
+          <li>
+            <textarea name="ans2">How many ounces are there in a pound?</textarea>
+            <input id="ans3" type="text" name="ans3" value="16">
+          </li>
+        </ol>
+        <button type="submit" name="editAnsKey">Save</button>
+      </section>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Create an Assignment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../styles/styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav id="main-nav">
+      <a class="nav-section" href="../profile-user.html">
+        <img src="../../../images/userIcon.jpg" alt="User's profile picture">
+        <p>User Name</p>
+      </a>
+      <a href="../home.html">
+        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+      </a>
+      <div class="nav-section">
+        <select name="coursesDropdown">
+          <option value="CRS 101">CRS 101</option>
+          <option value="CRS 102">CRS 102</option>
+        </select>
+        <a href="../profile-course.html">
+          <img src="../../../images/infoIcon.jpg" alt="View course information">
+        </a>
+      </div>
+    </nav>
+
+    <div class="main-margin">
+      <nav id="course-nav">
+        <a class="nav-section" href="content.html">
+          <img src="../../../images/contentIcon.jpg" alt="Contents">
+          <p>Contents</p>
+        </a>
+        <a class="nav-section" href="../instructors/instructors.html">
+          <img src="../../../images/instructorIcon.jpg" alt="Instructors">
+          <p>Instructors</p>
+        </a>
+        <a class="nav-section" href="../students/students.html">
+          <img src="../../../images/studentIcon.jpg" alt="Students">
+          <p>Students</p>
+        </a>
+      </nav>
+
+      <header>
+        <a class="header-section mini" href="assignments.html">
+          <img src="../../../images/backIcon.jpg" alt="Go back">
+        </a>
+        <div class="header-section">
+          <img src="../../../images/videoIcon.jpg" alt="View materials">
+          <h1>Create an Assignment</h1>
+        </div>
+      </header>
+
+      <section id="assignmen-create">
+        <p>
+          <label for="assign-name">Assignment name:
+            <input id="assign-name" type="text" name="assign-name">
+          </label>
+        </p>
+        <p>
+          <label for="due-date">Due Date:
+            <input id="due-date" type="date" name="due-date">
+          </label>
+        </p>
+        <p>
+          <label for="question">Question 1:
+            <textarea id="question" name="question"></textarea>
+          </label>
+          <label for="answer">Answer:
+            <input id="answer" type="text" name="answer">
+          </label>
+        </p>
+
+        <a href="#">Add another question</a>
+
+        <p>
+          <button type="submit" name="button">Create Assignment</button>
+        </p>
+      </section>
+
+    </div>
+  </body>
+</html>

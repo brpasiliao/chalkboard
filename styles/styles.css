@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+}
+
+.main-margin {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: lightpink;
+}
+
+a {
+  background: lightblue;
+}
+
+img {
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+#main-nav {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  background: lightgreen;
+  justify-content: space-between;
+}
+
+.nav-section {
+  display: flex;
+}
+
+nav img {
+  height: 50px;
+}
+
+.course {
+  display: flex;
+}
+
+#course-nav {
+  display: flex;
+}
+
+#course-nav .nav-section {
+  flex-basis: 100%;
+  justify-content: center;
+  display: flex;
+  border: 1px solid black;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: violet;
+}
+
+.header-section {
+  display: flex;
+}
+
+header img {
+  height: 50px;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+.content {
+  display: flex;
+}
+
+.material {
+  display: flex;
+}
+
+.assignment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.instructor {
+  display: flex;
+}
+
+.student {
+  display: flex;
+  justify-content: space-between;
+}
+
+.student-info {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.course-instructors {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mini {
+  flex-basis: 10%;
+}
+
+.todo-work, .completed-work {
+  display: flex;
+  justify-content: space-between;
+}
