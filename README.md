@@ -1,5 +1,5 @@
-# Chalkboard 
-By: Bian Pasiliao
+# Chalkboard
+By: Bian Pasiliao  
 Site is live at: https://brpasiliao.github.io/chalkboard/
 
 ## Technologies used:
