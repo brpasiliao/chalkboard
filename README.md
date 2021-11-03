@@ -1,9 +1,9 @@
-# Chalkboard by Bian Pasiliao
-
-## Site is live at: https://brpasiliao.github.io/chalkboard/
+# Chalkboard 
+By: Bian Pasiliao
+Site is live at: https://brpasiliao.github.io/chalkboard/
 
 ## Technologies used:
-### Front-end: HTML and CSS
+Front-end: HTML and CSS
 
 ## Sketches:
 ### Sitemap:
