@@ -311,9 +311,13 @@ header {
 }
 
 header h1 {
-  flex-basis: 60%;
+  flex-basis: 80%;
   margin: 5px 10px;
   font-size: 2em;
+}
+
+.mini {
+  flex-basis: 10%;
 }
 
 .header-section {
@@ -459,10 +463,6 @@ header img {
 .course-instructors {
   display: flex;
   justify-content: space-around;
-}
-
-.mini {
-  flex-basis: 10%;
 }
 
 .todo-work,
