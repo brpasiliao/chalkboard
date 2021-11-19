@@ -6,12 +6,13 @@ html {
   --selected-color: #ededed20;
   /* --nav-color: rgb(219,189,145); */
   --nav-color: rgb(192, 156, 112);
-  --active-red: rgba(255, 146, 146, 0.8);
-  --active-blue: rgba(118, 191, 255, 0.8);
-  --active-yellow: rgba(255, 238, 113, 0.8);
-  --inactive-red: rgba(255, 146, 146, 0.5);
-  --inactive-blue: rgba(118, 191, 255, 0.5);
-  --inactive-yellow: rgba(255, 238, 113, 0.5);
+  --active-red: rgba(255, 146, 146, 0.7);
+  --active-blue: rgba(118, 191, 255, 0.7);
+  --active-yellow: rgba(255, 238, 113, 0.7);
+  --inactive-red: rgba(255, 146, 146, 0.3);
+  --inactive-blue: rgba(118, 191, 255, 0.3);
+  --inactive-yellow: rgba(255, 238, 113, 0.3);
+  --border-color: white;
   /* --nav-color: rgb(219, 189, 145); */
 
   --nav-height: 70px;
@@ -215,34 +216,106 @@ nav img {
   /* background: lightpink; */
 }
 
+section {
+  border-right: 3px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
+  border-left: 3px solid var(--border-color);
+  border-radius: 0 0 10px 10px;
+}
+
 /* -----COURSE NAV----------------- */
 #course-nav {
   display: flex;
-  background-color: var(--hover-color);
+  /* background-color: var(--hover-color); */
+  border-radius: 10px 10px 0 0;
 }
 
-#course-nav .nav-section {
+.course-tab {
   flex-basis: 100%;
   justify-content: center;
+  position: relative;
   display: flex;
-  /* border: 1px solid black; */
+  margin: auto 0;
+  padding: 8px 5px 8px 5px;
+  border-bottom: 3px solid var(--border-color);
   border-radius: 10px 10px 0 0;
+  transition: background 0.3s;
+}
+
+.course-tab img {
+  height: 35px;
+}
+
+.course-tab p {
+  margin: auto 0 auto 5px;
+}
+
+#contents-tab {
+  background: var(--inactive-red);
+}
+
+#instructors-tab {
+  background: var(--inactive-yellow);
+}
+
+#students-tab {
+  background: var(--inactive-blue);
+}
+
+.active-tab#contents-tab,
+#contents-tab:hover {
+  background: var(--active-red);
+}
+
+.active-tab#instructors-tab,
+#instructors-tab:hover {
+  background: var(--active-yellow);
+}
+
+.active-tab#students-tab,
+#students-tab:hover {
+  background: var(--active-blue);
+}
+
+.active-tab {
+  border-left: 3px solid var(--border-color);
+  border-top: 3px solid var(--border-color);
+  border-right: 3px solid var(--border-color);
+  border-bottom: none;
+}
+
+.active-border {
+  position: absolute;
+  background: white;
+  /* border-bottom: 2px solid white; */
+  height: 3px;
+  width: 70%;
+  border-radius: 3px 3px 0 0;
+  left: 15%;
+  bottom: 0;
+  right: 15%;
 }
 
 /* -----HEADER--------------------- */
 header {
   display: flex; /* delete */
+  position: relative;
+  box-sizing: border-box;
   width: 100%;
   justify-content: space-between;
   /* border: 1px solid var(--text-color); */
   background: var(--hover-color);
+  border-left: 3px solid var(--border-color);
+  border-right: 3px solid var(--border-color);
 }
 
 #home-header {
   border-radius: 10px 10px 0 0;
+  border: none;
 }
 
 header h1 {
+  flex-basis: 60%;
   margin: 5px 10px;
   font-size: 2em;
 }
