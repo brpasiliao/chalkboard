@@ -1,43 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Content</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../styles/styles.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../../styles/styles.css" rel="stylesheet" />
   </head>
   <body>
     <nav id="main-nav">
       <a class="nav-section" href="../profile-user.html">
-        <img src="../../../images/userIcon.jpg" alt="User's profile picture">
+        <img src="../../../images/userIcon.jpg" alt="User's profile picture" />
         <p>User Name</p>
       </a>
-      <a href="../home.html">
-        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+      <a id="logo-section" class="nav-section" href="../home.html">
+        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo" />
       </a>
-      <div class="nav-section">
-        <select name="coursesDropdown">
-          <option value="CRS 101">CRS 101</option>
-          <option value="CRS 102">CRS 102</option>
-        </select>
-        <a href="../profile-course.html">
-          <img src="../../../images/infoIcon.jpg" alt="View course information">
-        </a>
+      <div id="course-section" class="nav-section nav-last flex">
+        <label for="course-select"
+          >Courses:
+          <select id="course-select" name="coursesDropdown">
+            <option value="CRS 101">CRS 101</option>
+            <option value="CRS 102">CRS 102</option>
+          </select>
+        </label>
+        <img src="../../../images/infoIcon.jpg" alt="Search button" />
       </div>
     </nav>
 
     <div class="main-margin">
       <nav id="course-nav">
         <a class="nav-section" href="content.html">
-          <img src="../../../images/contentIcon.jpg" alt="Contents">
+          <img src="../../../images/contentIcon.jpg" alt="Contents" />
           <p>Contents</p>
         </a>
         <a class="nav-section" href="../instructors/instructors.html">
-          <img src="../../../images/instructorIcon.jpg" alt="Instructors">
+          <img src="../../../images/instructorIcon.jpg" alt="Instructors" />
           <p>Instructors</p>
         </a>
         <a class="nav-section" href="../students/students.html">
-          <img src="../../../images/studentIcon.jpg" alt="Students">
+          <img src="../../../images/studentIcon.jpg" alt="Students" />
           <p>Students</p>
         </a>
       </nav>
@@ -46,17 +47,16 @@
         <h1>CRS 101 Content</h1>
       </header>
 
-      <section id="contents">
-        <a class="content" href="materials.html">
-          <img src="../../../images/videoIcon.jpg" alt="Material">
-          <p>Materials</p>
+      <section id="content">
+        <a class="contents flex" href="materials.html">
+          <img src="../../../images/videoIcon.jpg" alt="Material" />
+          <h2>Materials</h2>
         </a>
-        <a class="content" href="assignments.html">
-          <img src="../../../images/documentIcon.jpg" alt="Material">
-          <p>Assignments</p>
+        <a class="contents flex" href="assignments.html">
+          <img src="../../../images/documentIcon.jpg" alt="Material" />
+          <h2>Assignments</h2>
         </a>
       </section>
-
     </div>
   </body>
 </html>

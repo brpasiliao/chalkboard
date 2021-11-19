@@ -1,37 +1,43 @@
 <!-- all nav bars -->
 
-
-
 <!-- main nav bar -->
-<nav id="main-nav">
+<nav id="main-nav" class="flex">
   <!-- profile section -->
-  <a class="nav-section" href="../profile-user.html">
-    <img src="../../../images/userIcon.jpg" alt="User's profile picture">
+  <a class="nav-section flex" href="../profile-user.html">
+    <img src="../../../images/userIcon.jpg" alt="User's profile picture" />
     <p>User Name</p>
   </a>
 
   <!-- logo section -->
-  <a href="home.html">
-    <img src="../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+  <a id="logo-section" class="nav-section" href="home.html">
+    <img src="../../images/chalkboardLogo.jpg" alt="Chalkboard logo" />
   </a>
 
   <!-- search/add section -->
-  <div class="nav-section">
-    <input id="search" type="text" name="search" placeholder="Search course">
-    <img src="../../images/searchIcon.jpg" alt="Search button">
+  <div id="search-add-section" class="nav-section nav-last flex">
+    <label for="search"
+      >Course Search:
+      <input id="search" type="text" name="search" placeholder="CRS 101" />
+    </label>
+    <img src="../../images/searchIcon.jpg" alt="Search button" />
 
     <!-- if instructor view -->
-    <a href="create-course.html"><img src="../../images/addIcon.jpg" alt="Add course button"></a>
+    <a href="create-course.html"
+      ><img src="../../images/addIcon.jpg" alt="Add course button"
+    /></a>
   </div>
 
   <!-- course section -->
-  <div class="nav-section">
-    <select name="coursesDropdown">
-      <option value="CRS 101">CRS 101</option>
-      <option value="CRS 102">CRS 102</option>
-    </select>
+  <div id="course-section" class="nav-section nav-last flex">
+    <label for="course-select">
+      Courses:
+      <select id="course-select" name="coursesDropdown">
+        <option value="CRS 101">CRS 101</option>
+        <option value="CRS 102">CRS 102</option>
+      </select>
+    </label>
     <a href="../profile-course.html">
-      <img src="../../../images/infoIcon.jpg" alt="View course information">
+      <img src="../../../images/infoIcon.jpg" alt="View course information" />
     </a>
   </div>
 
@@ -39,70 +45,65 @@
     back button
     course/instructor/student name
   </div> -->
-
 </nav>
-
 
 <!-- course nav bar -->
 <nav id="course-nav">
   <!-- instructor view -->
-  <a class="nav-section" href="content.html">
-    <img src="../../../images/contentIcon.jpg" alt="Contents">
+  <a class="nav-section flex" href="content.html">
+    <img src="../../../images/contentIcon.jpg" alt="Contents" />
     <p>Contents</p>
   </a>
-  <a class="nav-section" href="../instructors/instructors.html">
-    <img src="../../../images/instructorIcon.jpg" alt="Instructors">
+  <a class="nav-section flex" href="../instructors/instructors.html">
+    <img src="../../../images/instructorIcon.jpg" alt="Instructors" />
     <p>Instructors</p>
   </a>
-  <a class="nav-section" href="../students/students.html">
-    <img src="../../../images/studentIcon.jpg" alt="Students">
+  <a class="nav-section flex" href="../students/students.html">
+    <img src="../../../images/studentIcon.jpg" alt="Students" />
     <p>Students</p>
   </a>
 
   <!-- student view -->
-  <a class="nav-section" href="materials.html">
-    <img src="../../../images/videoIcon.jpg" alt="Materials">
+  <a class="nav-section flex" href="materials.html">
+    <img src="../../../images/videoIcon.jpg" alt="Materials" />
     <p>Materials</p>
   </a>
-  <a class="nav-section" href="../todo/todo.html">
-    <img src="../../../images/todoIcon.jpg" alt="Instructors">
+  <a class="nav-section flex" href="../todo/todo.html">
+    <img src="../../../images/todoIcon.jpg" alt="Instructors" />
     <p>To Do</p>
   </a>
-  <a class="nav-section" href="../completed/completed.html">
-    <img src="../../../images/doneIcon.jpg" alt="Students">
+  <a class="nav-section flex" href="../completed/completed.html">
+    <img src="../../../images/doneIcon.jpg" alt="Students" />
     <p>Completed</p>
   </a>
 </nav>
-
 
 <!-- content header -->
 <header>
   <h1>CRS 101 Content</h1>
 </header>
 
-
-
 <!-- content materials header -->
 <header>
   <a class="header-section mini" href="courseContent.html">
-    <img src="../../images/backIcon.jpg" alt="Go back">
+    <img src="../../images/backIcon.jpg" alt="Go back" />
   </a>
   <div class="header-section">
-    <img src="../../images/videoIcon.jpg" alt="View materials">
+    <img src="../../images/videoIcon.jpg" alt="View materials" />
     <h1>Materials</h1>
   </div>
   <a class="header-section mini" href="courseMaterialCreate.html">
-    <img src="../../images/addIcon.jpg" alt="Add material">
+    <img src="../../images/addIcon.jpg" alt="Add material" />
   </a>
 </header>
 
 <!-- add material header -->
 <header>
   <a class="header-section mini" href="courseMaterials.html">
-    <img src="../../images/backIcon.jpg" alt="Go back">
+    <img src="../../images/backIcon.jpg" alt="Go back" />
   </a>
   <div class="header-section">
-    <img src="../../images/videoIcon.jpg" alt="View materials">
+    <img src="../../images/videoIcon.jpg" alt="View materials" />
     <h1>Create a Material</h1>
   </div>
 </header>
@@ -110,43 +111,41 @@
 <!-- view material header -->
 <header>
   <a class="header-section mini" href="courseMaterials.html">
-    <img src="../../images/backIcon.jpg" alt="Go back">
+    <img src="../../images/backIcon.jpg" alt="Go back" />
   </a>
   <div class="header-section">
-    <img src="../../images/videoIcon.jpg" alt="View materials">
+    <img src="../../images/videoIcon.jpg" alt="View materials" />
     <h1>Material Name</h1>
   </div>
   <a class="header-section mini" href="courseMaterials.html">
-    <img src="../../images/trashIcon.jpg" alt="Delete material">
+    <img src="../../images/trashIcon.jpg" alt="Delete material" />
   </a>
 </header>
-
-
 
 <!-- content assignments header -->
 <header>
   <a class="header-section mini" href="courseContent.html">
-    <img src="../../images/backIcon.jpg" alt="Go back">
+    <img src="../../images/backIcon.jpg" alt="Go back" />
   </a>
   <div class="header-section">
-    <img src="../../images/documentIcon.jpg" alt="View assignments">
+    <img src="../../images/documentIcon.jpg" alt="View assignments" />
     <h1>Assignments</h1>
   </div>
   <a class="header-section mini" href="courseAssignmentCreate.html">
-    <img src="../../images/addIcon.jpg" alt="Add assignment">
+    <img src="../../images/addIcon.jpg" alt="Add assignment" />
   </a>
 </header>
 
 <!-- view assignment header -->
 <header>
   <a class="header-section mini" href="courseAssignments.html">
-    <img src="../../images/backIcon.jpg" alt="Go back">
+    <img src="../../images/backIcon.jpg" alt="Go back" />
   </a>
   <div class="header-section">
-    <img src="../../images/documentIcon.jpg" alt="Assignment icon">
+    <img src="../../images/documentIcon.jpg" alt="Assignment icon" />
     <h1>Assignment Name</h1>
   </div>
   <a class="header-section mini" href="courseAssignmentEdit.html">
-    <img src="../../images/editIcon.jpg" alt="Edit assignment">
+    <img src="../../images/editIcon.jpg" alt="Edit assignment" />
   </a>
 </header>
