@@ -6,9 +6,12 @@ html {
   --selected-color: #ededed20;
   /* --nav-color: rgb(219,189,145); */
   --nav-color: rgb(192, 156, 112);
-  --chalk-red: rgba(255, 146, 146, 0.5);
-  --chalk-blue: rgba(118, 191, 255, 0.5);
-  --chalk yellow: rgba(255, 238, 113, 0.5);
+  --active-red: rgba(255, 146, 146, 0.8);
+  --active-blue: rgba(118, 191, 255, 0.8);
+  --active-yellow: rgba(255, 238, 113, 0.8);
+  --inactive-red: rgba(255, 146, 146, 0.5);
+  --inactive-blue: rgba(118, 191, 255, 0.5);
+  --inactive-yellow: rgba(255, 238, 113, 0.5);
   /* --nav-color: rgb(219, 189, 145); */
 
   --nav-height: 70px;
@@ -149,7 +152,7 @@ h1 {
 /* sign up - @700, put student/teacher under, make forms wider */
 
 /* -----LOGGED---------------------------------- */
-/* -----MAIN NAV---------------------- */
+/* -----MAIN NAV------------------------ */
 nav img {
   height: 50px;
 }
@@ -203,9 +206,19 @@ nav img {
   justify-content: right;
 }
 
-/* -----COURSE NAV-------------------- */
+/* -----MARGIN-------------------------- */
+.main-margin {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: calc(var(--nav-height) + 10px);
+  /* background: lightpink; */
+}
+
+/* -----COURSE NAV----------------- */
 #course-nav {
   display: flex;
+  background-color: var(--hover-color);
 }
 
 #course-nav .nav-section {
@@ -213,15 +226,19 @@ nav img {
   justify-content: center;
   display: flex;
   /* border: 1px solid black; */
+  border-radius: 10px 10px 0 0;
 }
 
-/* -----HEADER------------------------- */
+/* -----HEADER--------------------- */
 header {
   display: flex; /* delete */
   width: 100%;
   justify-content: space-between;
   /* border: 1px solid var(--text-color); */
   background: var(--hover-color);
+}
+
+#home-header {
   border-radius: 10px 10px 0 0;
 }
 
@@ -236,15 +253,6 @@ header h1 {
 
 header img {
   height: 50px;
-}
-
-/* -----MARGIN------------------------- */
-.main-margin {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: calc(var(--nav-height) + 10px);
-  /* background: lightpink; */
 }
 
 /* -----LARGE-------------------- */
@@ -288,30 +296,30 @@ header img {
 
 */
 
-/* -----CONTENTS----------------- */
-.contents {
+/* -----LARGEST------------------ */
+.largest {
   display: flex; /* delete */
   justify-content: center;
 }
 
-.contents {
+.largest {
   padding: 50px;
   transition: background 0.3s;
 }
 
-.contents img {
+.largest img {
   flex-basis: 20%;
   /* padding: 50px; */
 }
 
-.contents h2 {
+.largest h2 {
   flex-basis: 40%;
   padding: 0 0 0 15px;
   margin: auto 0;
   font-size: 1.75em;
 }
 
-.contents:hover {
+.largest:hover {
   background: var(--hover-color);
 }
 
