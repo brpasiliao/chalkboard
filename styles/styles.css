@@ -12,7 +12,7 @@ html {
   --inactive-red: rgba(255, 146, 146, 0.3);
   --inactive-blue: rgba(118, 191, 255, 0.3);
   --inactive-yellow: rgba(255, 238, 113, 0.3);
-  --border-color: white;
+  --border-color: #eeeeee;
   /* --nav-color: rgb(219, 189, 145); */
 
   --nav-height: 70px;
@@ -278,6 +278,7 @@ section {
 }
 
 .active-tab {
+  padding: 6px 5px 10px 5px;
   border-left: 3px solid var(--border-color);
   border-top: 3px solid var(--border-color);
   border-right: 3px solid var(--border-color);
@@ -309,11 +310,6 @@ header {
   border-right: 3px solid var(--border-color);
 }
 
-#home-header {
-  border-radius: 10px 10px 0 0;
-  border: none;
-}
-
 header h1 {
   flex-basis: 60%;
   margin: 5px 10px;
@@ -326,6 +322,11 @@ header h1 {
 
 header img {
   height: 50px;
+}
+
+#home-header {
+  border-top: 3px solid var(--border-color);
+  border-radius: 10px 10px 0 0;
 }
 
 /* -----LARGE-------------------- */
