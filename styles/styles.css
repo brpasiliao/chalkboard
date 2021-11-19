@@ -50,6 +50,10 @@ a {
   display: flex;
 }
 
+.flex-last {
+  justify-content: right;
+}
+
 img {
   border-radius: 50%;
 }
@@ -203,10 +207,6 @@ nav img {
   display: flex; /* delete */
 }
 
-.nav-last {
-  justify-content: right;
-}
-
 /* -----MARGIN-------------------------- */
 .main-margin {
   width: 80%;
@@ -304,7 +304,7 @@ header {
   box-sizing: border-box;
   width: 100%;
   justify-content: space-between;
-  /* border: 1px solid var(--text-color); */
+  padding: 7px;
   background: var(--hover-color);
   border-left: 3px solid var(--border-color);
   border-right: 3px solid var(--border-color);
@@ -329,12 +329,40 @@ header img {
   border-radius: 10px 10px 0 0;
 }
 
-/* -----LARGE-------------------- */
-/* .home {
-  display: grid;
-  
-} */
+/* -----MEDIUM------------------- */
+.medium {
+  display: flex; /* delete */
+  justify-content: left;
+  padding: 10px;
+  transition: background 0.3s;
+}
 
+.medium:hover {
+  background: var(--hover-color);
+}
+
+.medium h2 {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.medium p {
+  font-size: 0.9em;
+  margin: 0.15em 0;
+}
+
+.medium img {
+  flex-basis: 10%;
+  height: 80px;
+}
+
+.medium .info {
+  flex-basis: 50%;
+  margin: auto 0;
+  padding-left: 15px;
+}
+
+/* -----LARGE-------------------- */
 .large {
   display: flex; /* delete */
   justify-content: space-between;
@@ -362,6 +390,7 @@ header img {
 .large .info {
   flex-basis: 75%;
   margin: auto 0;
+  padding-left: 15px;
 }
 
 /* 
@@ -396,36 +425,6 @@ header img {
 .largest:hover {
   background: var(--hover-color);
 }
-
-/* -----MEDIUM------------------- */
-/* .medium {
-  display: flex; delete
-  justify-content: space-between;
-  padding: 10px;
-  transition: background 0.3s;
-}
-
-.large:hover {
-  background: var(--hover-color);
-}
-
-.large h2 {
-  font-size: 1.5em;
-  margin: 0;
-}
-
-.large p {
-  margin: 0.35em 0;
-}
-
-.large img {
-  flex-basis: 20%;
-}
-
-.large .info {
-  flex-basis: 75%;
-  margin: auto 0;
-} */
 
 /* 
 
