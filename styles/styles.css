@@ -247,7 +247,7 @@ header img {
   /* background: lightpink; */
 }
 
-/* -----HOME--------------------- */
+/* -----LARGE-------------------- */
 /* .home {
   display: grid;
   
@@ -288,9 +288,69 @@ header img {
 
 */
 
-.content {
-  display: flex;
+/* -----CONTENTS----------------- */
+.contents {
+  display: flex; /* delete */
+  justify-content: center;
 }
+
+.contents {
+  padding: 50px;
+  transition: background 0.3s;
+}
+
+.contents img {
+  flex-basis: 20%;
+  /* padding: 50px; */
+}
+
+.contents h2 {
+  flex-basis: 40%;
+  padding: 0 0 0 15px;
+  margin: auto 0;
+  font-size: 1.75em;
+}
+
+.contents:hover {
+  background: var(--hover-color);
+}
+
+/* -----MEDIUM------------------- */
+/* .medium {
+  display: flex; delete
+  justify-content: space-between;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.large:hover {
+  background: var(--hover-color);
+}
+
+.large h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.large p {
+  margin: 0.35em 0;
+}
+
+.large img {
+  flex-basis: 20%;
+}
+
+.large .info {
+  flex-basis: 75%;
+  margin: auto 0;
+} */
+
+/* 
+
+
+
+
+*/
 
 .material {
   display: flex;
