@@ -53,10 +53,6 @@
   background: var(--hover-color);
 }
 
-/* .not-list input[type="file"]::file-selector-button:hover {
-  background: var(--hover-color);
-} */
-
 .not-list textarea {
   margin: 10px 0;
   width: 100%;
@@ -89,10 +85,6 @@
   background: var(--hover-color);
 }
 
-.logged-button:hover {
-  background: var(--hover-color);
-}
-
 .dynamic-button {
   width: 60%;
   margin: 0 20% 40px;
@@ -105,6 +97,10 @@
   text-align: center;
   border: 2px solid var(--text-color);
   transition: background 0.3s;
+}
+
+#create-course .dynamic-button {
+  margin-bottom: 15px;
 }
 
 .dynamic-button:hover {

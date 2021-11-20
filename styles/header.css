@@ -28,7 +28,7 @@ header img {
   height: 50px;
 }
 
-#home-header {
+.uncoursed {
   border-top: 3px solid var(--border-color);
   border-radius: 10px 10px 0 0;
 }
