@@ -1,3 +1,44 @@
+/* -----SMALL-------------------- */
+.small {
+  display: flex; /* delete */
+  justify-content: space-between;
+  padding: 10px 10%;
+  transition: background 0.3s;
+}
+
+.small:hover {
+  background: var(--hover-color);
+}
+
+.small a {
+  flex-basis: 10%;
+  justify-content: space-between;
+}
+
+.small a.flex {
+  flex-basis: 65%;
+  justify-content: space-between;
+  margin: auto 0;
+  text-align: center;
+}
+
+.small h2 {
+  flex-basis: 40%;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.small p {
+  flex-basis: 40%;
+  font-size: 0.9em;
+  margin: 0.15em 0;
+}
+
+.small img {
+  flex-basis: fit-content;
+  height: 60px;
+}
+
 /* -----MEDIUM------------------- */
 .medium {
   display: flex; /* delete */

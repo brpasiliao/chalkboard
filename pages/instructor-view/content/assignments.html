@@ -1,77 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Assignments</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../styles/styles.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../../styles/styles.css" rel="stylesheet" />
   </head>
   <body>
     <nav id="main-nav">
       <a class="nav-section" href="../profile-user.html">
-        <img src="../../../images/userIcon.jpg" alt="User's profile picture">
+        <img src="../../../images/userIcon.jpg" alt="User's profile picture" />
         <p>User Name</p>
       </a>
-      <a href="../home.html">
-        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+      <a id="logo-section" class="nav-section" href="../home.html">
+        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo" />
       </a>
-      <div class="nav-section">
-        <select name="coursesDropdown">
-          <option value="CRS 101">CRS 101</option>
-          <option value="CRS 102">CRS 102</option>
-        </select>
-        <a href="../profile-course.html">
-          <img src="../../../images/infoIcon.jpg" alt="View course information">
-        </a>
+      <div id="course-section" class="nav-section flex-last flex">
+        <label for="course-select"
+          >Courses:
+          <select id="course-select" name="coursesDropdown">
+            <option value="CRS 101">CRS 101</option>
+            <option value="CRS 102">CRS 102</option>
+          </select>
+        </label>
+        <img src="../../../images/infoIcon.jpg" alt="Search button" />
       </div>
     </nav>
 
     <div class="main-margin">
       <nav id="course-nav">
-        <a class="nav-section" href="content.html">
-          <img src="../../../images/contentIcon.jpg" alt="Contents">
+        <a id="contents-tab" class="active-tab course-tab" href="content.html">
+          <div class="active-border"></div>
+          <img src="../../../images/contentIcon.jpg" alt="Contents" />
           <p>Contents</p>
         </a>
-        <a class="nav-section" href="../instructors/instructors.html">
-          <img src="../../../images/instructorIcon.jpg" alt="Instructors">
+        <a
+          id="instructors-tab"
+          class="course-tab"
+          href="../instructors/instructors.html"
+        >
+          <img src="../../../images/instructorIcon.jpg" alt="Instructors" />
           <p>Instructors</p>
         </a>
-        <a class="nav-section" href="../students/students.html">
-          <img src="../../../images/studentIcon.jpg" alt="Students">
+        <a
+          id="students-tab"
+          class="course-tab"
+          href="../students/students.html"
+        >
+          <img src="../../../images/studentIcon.jpg" alt="Students" />
           <p>Students</p>
         </a>
       </nav>
 
       <header>
+        <div class="active-border"></div>
         <a class="header-section mini" href="content.html">
-          <img src="../../../images/backIcon.jpg" alt="Go back">
+          <img src="../../../images/backIcon.jpg" alt="Go back" />
         </a>
         <div class="header-section">
-          <img src="../../../images/documentIcon.jpg" alt="View assignments">
+          <img src="../../../images/documentIcon.jpg" alt="View assignments" />
           <h1>Assignments</h1>
         </div>
-        <a class="header-section mini" href="assignment-create.html">
-          <img src="../../../images/addIcon.jpg" alt="Add assignment">
+        <a class="header-section mini flex-last" href="assignment-create.html">
+          <img src="../../../images/addIcon.jpg" alt="Add assignment" />
         </a>
       </header>
 
       <section id="assignments">
-        <a class="assignment" href="assignment-view.html">
-          <p>Due Date</p>
-          <p>Assignment1</p>
-          <!-- <a href="#"> -->
-            <img src="../../../images/studentIcon.jpg" alt="See students' progress">
-          <!-- </a> -->
-        </a>
-        <a class="assignment" href="assignment-view.html">
-          <p>Due Date</p>
-          <p>Assignment2</p>
-          <!-- <a href="#"> -->
-            <img src="../../../images/studentIcon.jpg" alt="See students' progress">
-          <!-- </a> -->
-        </a>
-      </section>
+        <div class="small flex" href="assignment-view.html">
+          <a class="flex" href="assignment-view.html">
+            <p>Due 10&#8209;28&#8209;21</p>
+            <h2>Assignment1</h2>
+          </a>
+          <a href="../students/student-progress.html">
+            <img
+              src="../../../images/studentIcon.jpg"
+              alt="See students' progress"
+            />
+          </a>
+        </div>
 
+        <div class="small flex">
+          <a class="flex" href="assignment-view.html">
+            <p>Not Due</p>
+            <h2>Assignment2</h2>
+          </a>
+          <a href="../students/student-progress.html">
+            <img
+              src="../../../images/studentIcon.jpg"
+              alt="See students' progress"
+            />
+          </a>
+        </div>
+      </section>
     </div>
   </body>
 </html>
