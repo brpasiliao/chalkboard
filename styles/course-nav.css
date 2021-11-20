@@ -51,6 +51,33 @@
   background: var(--active-blue);
 }
 
+.first-tab {
+  background: var(--inactive-red);
+}
+
+.second-tab {
+  background: var(--inactive-yellow);
+}
+
+.third-tab {
+  background: var(--inactive-blue);
+}
+
+.active-tab.first-tab,
+.first-tab:hover {
+  background: var(--active-red);
+}
+
+.active-tab.second-tab,
+.second-tab:hover {
+  background: var(--active-yellow);
+}
+
+.active-tab.third-tab,
+.third-tab:hover {
+  background: var(--active-blue);
+}
+
 .active-tab {
   padding: 6px 5px 10px 5px;
   border-left: 3px solid var(--border-color);

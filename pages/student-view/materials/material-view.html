@@ -1,19 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Material Name</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../styles/styles.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../../styles/styles.css" rel="stylesheet" />
   </head>
   <body>
     <nav id="main-nav">
       <a class="nav-section" href="../profile-user.html">
-        <img src="../../../images/userIcon.jpg" alt="User's profile picture">
+        <img src="../../../images/userIcon.jpg" alt="User's profile picture" />
         <p>User Name</p>
       </a>
       <a href="../home.html">
-        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo" />
       </a>
       <div class="nav-section">
         <select name="coursesDropdown">
@@ -21,38 +21,42 @@
           <option value="CRS 102">CRS 102</option>
         </select>
         <a href="../profile-course.html">
-          <img src="../../../images/infoIcon.jpg" alt="View course information">
+          <img
+            src="../../../images/infoIcon.jpg"
+            alt="View course information"
+          />
         </a>
       </div>
     </nav>
 
     <div class="main-margin">
       <nav id="course-nav">
-        <a class="nav-section" href="materials.html">
-          <img src="../../../images/videoIcon.jpg" alt="Materials">
+        <a class="active-tab first-tab course-tab" href="materials.html">
+          <div class="active-border"></div>
+          <img src="../../../images/videoIcon.jpg" alt="Materials" />
           <p>Materials</p>
         </a>
-        <a class="nav-section" href="../todo/todo.html">
-          <img src="../../../images/todoIcon.jpg" alt="Instructors">
+        <a class="second-tab course-tab" href="../todo/todo.html">
+          <img src="../../../images/todoIcon.jpg" alt="Instructors" />
           <p>To Do</p>
         </a>
-        <a class="nav-section" href="../completed/completed.html">
-          <img src="../../../images/doneIcon.jpg" alt="Students">
+        <a class="third-tab course-tab" href="../completed/completed.html">
+          <img src="../../../images/doneIcon.jpg" alt="Students" />
           <p>Completed</p>
         </a>
       </nav>
 
       <header>
         <a class="header-section mini" href="materials.html">
-          <img src="../../../images/backIcon.jpg" alt="Go back">
+          <img src="../../../images/backIcon.jpg" alt="Go back" />
         </a>
-        <div class="header-section">
-          <img src="../../../images/videoIcon.jpg" alt="View materials">
+        <div class="header-section header-title">
+          <img src="../../../images/videoIcon.jpg" alt="View materials" />
           <h1>Material Name</h1>
         </div>
       </header>
 
-      <section id="material-view">
+      <section id="material-view" class="not-list expanded">
         <p>insert file here</p>
         <p>insert file here</p>
         <p>insert file here</p>
@@ -63,7 +67,6 @@
         <p>insert file here</p>
         <p>insert file here</p>
       </section>
-
     </div>
   </body>
 </html>
