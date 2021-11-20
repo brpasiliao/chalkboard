@@ -10,11 +10,6 @@
   background: var(--hover-color);
 }
 
-.small a {
-  flex-basis: 10%;
-  justify-content: space-between;
-}
-
 .small a.flex {
   flex-basis: 65%;
   justify-content: space-between;
@@ -22,16 +17,27 @@
   text-align: center;
 }
 
-#students .small a.flex {
-  flex-basis: 80%;
-  justify-content: left;
-  text-align: left;
-}
-
 .small h2 {
   flex-basis: 40%;
   font-size: 1.3em;
   margin: auto 0;
+}
+
+.small p {
+  flex-basis: 40%;
+  font-size: 0.9em;
+  margin: auto 0;
+}
+
+.small img {
+  flex-basis: fit-content;
+  height: 60px;
+}
+
+#students .small a.flex {
+  flex-basis: 80%;
+  justify-content: left;
+  text-align: left;
 }
 
 #students .small h2 {
@@ -41,15 +47,13 @@
   padding-left: 20px;
 }
 
-.small p {
-  flex-basis: 40%;
-  font-size: 0.9em;
-  margin: 0.15em 0;
+#student-progress .small h2 {
+  flex-basis: 80%;
+  text-align: center;
 }
 
-.small img {
-  flex-basis: fit-content;
-  height: 60px;
+#student-progress .small p {
+  flex-basis: 10%;
 }
 
 /* -----MEDIUM------------------- */

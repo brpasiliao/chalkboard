@@ -1,109 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Student Name's Work</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../styles/styles.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../../styles/styles.css" rel="stylesheet" />
   </head>
   <body>
     <nav id="main-nav">
       <a class="nav-section" href="../profile-user.html">
-        <img src="../../../images/userIcon.jpg" alt="User's profile picture">
+        <img src="../../../images/userIcon.jpg" alt="User's profile picture" />
         <p>User Name</p>
       </a>
-      <a href="../home.html">
-        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo">
+      <a id="logo-section" class="nav-section" href="../home.html">
+        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo" />
       </a>
-      <div class="nav-section">
-        <select name="coursesDropdown">
-          <option value="CRS 101">CRS 101</option>
-          <option value="CRS 102">CRS 102</option>
-        </select>
-        <a href="../profile-course.html">
-          <img src="../../../images/infoIcon.jpg" alt="View course information">
-        </a>
+      <div id="course-section" class="nav-section flex-last flex">
+        <label for="course-select"
+          >Courses:
+          <select id="course-select" name="coursesDropdown">
+            <option value="CRS 101">CRS 101</option>
+            <option value="CRS 102">CRS 102</option>
+          </select>
+        </label>
+        <img src="../../../images/infoIcon.jpg" alt="Search button" />
       </div>
     </nav>
 
     <div class="main-margin">
       <nav id="course-nav">
-        <a class="nav-section" href="../content/content.html">
-          <img src="../../../images/contentIcon.jpg" alt="Contents">
+        <a id="contents-tab" class="course-tab" href="../content/content.html">
+          <img src="../../../images/contentIcon.jpg" alt="Contents" />
           <p>Contents</p>
         </a>
-        <a class="nav-section" href="../instructors/instructors.html">
-          <img src="../../../images/instructorIcon.jpg" alt="Instructors">
+        <a
+          id="instructors-tab"
+          class="course-tab"
+          href="../instructors/instructors.html"
+        >
+          <img src="../../../images/instructorIcon.jpg" alt="Instructors" />
           <p>Instructors</p>
         </a>
-        <a class="nav-section" href="students.html">
-          <img src="../../../images/studentIcon.jpg" alt="Students">
+        <a
+          id="students-tab"
+          class="active-tab course-tab"
+          href="../students/students.html"
+        >
+          <div class="active-border"></div>
+          <img src="../../../images/studentIcon.jpg" alt="Students" />
           <p>Students</p>
         </a>
       </nav>
 
       <header>
+        <div class="active-border"></div>
         <a class="header-section mini" href="student-progress.html">
-          <img src="../../../images/backIcon.jpg" alt="Go back">
+          <img src="../../../images/backIcon.jpg" alt="Go back" />
         </a>
         <div class="header-section">
-          <img src="../../../images/userIcon.jpg" alt="View materials">
+          <img src="../../../images/userIcon.jpg" alt="View materials" />
           <h1>Student Name's Work on Assignment1</h1>
         </div>
       </header>
 
-      <section id="assignment-view">
+      <section id="assignment-view" class="not-list expanded">
         <ol>
           <li>
             <p>How many inches are there in a foot? <b>12</b></p>
-            <input id="correct" type="radio" name="mark" value="correct">
+            <input id="correct" type="radio" name="mark" value="correct" />
             <label for="correct">Correct</label>
-            <input id="wrong" type="radio" name="mark" value="wrong">
+            <input id="wrong" type="radio" name="mark" value="wrong" />
             <label for="wrong">Wrong</label>
             <p>
-              <label for="comment">Comments:
+              <label for="comment"
+                >Comments:
                 <textarea id="comment" name="comment"></textarea>
               </label>
             </p>
           </li>
           <li>
             <p>How many centimeters are there in a meter? <b>100</b></p>
-            <input id="correct" type="radio" name="mark" value="correct">
+            <input id="correct" type="radio" name="mark" value="correct" />
             <label for="correct">Correct</label>
-            <input id="wrong" type="radio" name="mark" value="wrong">
+            <input id="wrong" type="radio" name="mark" value="wrong" />
             <label for="wrong">Wrong</label>
             <p>
-              <label for="comment">Comments:
+              <label for="comment"
+                >Comments:
                 <textarea id="comment" name="comment"></textarea>
               </label>
             </p>
           </li>
           <li>
             <p>How many ounces are there in a pound? <b>12</b></p>
-            <input id="correct" type="radio" name="mark" value="correct">
+            <input id="correct" type="radio" name="mark" value="correct" />
             <label for="correct">Correct</label>
-            <input id="wrong" type="radio" name="mark" value="wrong">
+            <input id="wrong" type="radio" name="mark" value="wrong" />
             <label for="wrong">Wrong</label>
             <p>
-              <label for="comment">Comments:
+              <label for="comment"
+                >Comments:
                 <textarea id="comment" name="comment"></textarea>
               </label>
             </p>
           </li>
         </ol>
-        <label for="grade">Grade:
-          <input id="grade" type="text" name="grade">
+        <label for="grade"
+          >Grade:
+          <input id="grade" type="text" name="grade" />
         </label>
         <p>
-          <label for="feedback">Feedback:
+          <label for="feedback"
+            >Feedback:
             <textarea id="feedback" name="feedback"></textarea>
           </label>
         </p>
         <p>
-          <button type="submit" name="button">Return Work</button>
+          <button class="logged-button" type="submit" name="button">
+            Return Work
+          </button>
         </p>
       </section>
-
     </div>
   </body>
 </html>

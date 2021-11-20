@@ -49,6 +49,7 @@ a {
 
 .flex-last {
   justify-content: right;
+  text-align: right;
 }
 
 img {
