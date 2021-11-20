@@ -10,6 +10,7 @@ nav img {
   /* padding: auto 20px; */
   background: var(--nav-color);
   justify-content: space-between;
+  z-index: 10;
 }
 
 #main-nav p {
