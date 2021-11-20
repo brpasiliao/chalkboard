@@ -76,7 +76,7 @@
 .large {
   display: flex; /* delete */
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
   transition: background 0.3s;
 }
 
@@ -102,12 +102,6 @@
   margin: auto 0;
   padding-left: 15px;
 }
-
-/* 
-  
-  
-  
-  */
 
 /* -----LARGEST------------------ */
 .largest {
@@ -135,10 +129,3 @@
 .largest:hover {
   background: var(--hover-color);
 }
-
-/* 
-  
-  
-  
-  
-  */
