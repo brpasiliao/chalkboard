@@ -22,10 +22,23 @@
   text-align: center;
 }
 
+#students .small a.flex {
+  flex-basis: 80%;
+  justify-content: left;
+  text-align: left;
+}
+
 .small h2 {
   flex-basis: 40%;
   font-size: 1.3em;
-  margin: 0;
+  margin: auto 0;
+}
+
+#students .small h2 {
+  flex-basis: 80%;
+  justify-content: left;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .small p {
