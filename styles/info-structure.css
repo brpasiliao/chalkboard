@@ -17,7 +17,7 @@
 .not-list input[type="text"] {
   margin: 10px 0;
   width: 100%;
-  background-color: transparent;
+  background: transparent;
   color: inherit;
   font-size: inherit;
   font-family: inherit;
@@ -25,9 +25,9 @@
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/::file-selector-button */
-#upload::file-selector-button {
+.not-list input[type="file"]::file-selector-button {
   margin: 10px;
-  background-color: transparent;
+  background: transparent;
   color: inherit;
   font-size: 18px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -35,9 +35,27 @@
   transition: background 0.3s;
 }
 
-#upload::file-selector-button:hover {
+.not-list input[type="date"]::file-selector-button:hover {
   background: var(--hover-color);
 }
+
+.not-list input[type="date"] {
+  margin: 10px;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
+  border: 1px solid var(--text-color);
+  transition: background 0.3s;
+}
+
+.not-list input[type="date"]:hover {
+  background: var(--hover-color);
+}
+
+/* .not-list input[type="file"]::file-selector-button:hover {
+  background: var(--hover-color);
+} */
 
 .not-list textarea {
   margin: 10px 0;
@@ -68,5 +86,27 @@
 }
 
 .logged-button:hover {
+  background: var(--hover-color);
+}
+
+.logged-button:hover {
+  background: var(--hover-color);
+}
+
+.dynamic-button {
+  width: 60%;
+  margin: 0 20% 40px;
+  padding: 10px;
+  background-color: transparent;
+  color: inherit;
+  font-size: 0.9em;
+  font-family: inherit;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid var(--text-color);
+  transition: background 0.3s;
+}
+
+.dynamic-button:hover {
   background: var(--hover-color);
 }
