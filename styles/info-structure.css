@@ -1,0 +1,50 @@
+.not-list {
+  padding: 25px 15%;
+}
+
+.not-list > p:first-of-type {
+  margin-top: 0;
+}
+
+.not-list input[type="text"] {
+  margin: 10px 0;
+  width: 100%;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border: 1px solid var(--text-color);
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::file-selector-button */
+#upload::file-selector-button {
+  margin: 10px;
+  background-color: transparent;
+  color: inherit;
+  font-size: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
+  border: 1px solid var(--text-color);
+  transition: background 0.3s;
+}
+
+#upload::file-selector-button:hover {
+  background: var(--hover-color);
+}
+
+#create-material-button {
+  width: 100%;
+  margin: 30px 0;
+  padding: 10px;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1.5em;
+  font-family: "Faraco Hand", "Chalkduster", fantasy;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid var(--text-color);
+  transition: background 0.3s;
+}
+
+#create-material-button:hover {
+  background: var(--hover-color);
+}

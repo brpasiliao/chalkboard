@@ -1,0 +1,56 @@
+html {
+  --bg-color: rgb(61, 72, 68);
+  --text-color: #eeeeee;
+  --hover-color: #ededed40;
+  --selected-color: #ededed20;
+  --nav-color: rgb(192, 156, 112);
+  --active-red: rgba(255, 146, 146, 0.7);
+  --active-blue: rgba(118, 191, 255, 0.7);
+  --active-yellow: rgba(255, 238, 113, 0.7);
+  --inactive-red: rgba(255, 146, 146, 0.3);
+  --inactive-blue: rgba(118, 191, 255, 0.3);
+  --inactive-yellow: rgba(255, 238, 113, 0.3);
+  --border-color: #eeeeee;
+
+  --nav-height: 70px;
+}
+
+@font-face {
+  font-family: "Faraco Hand";
+  src: url(../fonts/Faraco\ Hand.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Faraco Hand", "Chalkduster", fantasy;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-last {
+  justify-content: right;
+}
+
+img {
+  border-radius: 50%;
+}

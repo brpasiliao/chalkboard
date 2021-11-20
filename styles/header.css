@@ -1,0 +1,39 @@
+header {
+  display: flex; /* delete */
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-between;
+  padding: 7px;
+  background: var(--hover-color);
+  border-left: 3px solid var(--border-color);
+  border-right: 3px solid var(--border-color);
+}
+
+header h1 {
+  /* flex-basis: 80%; */
+  margin: 5px 10px;
+  font-size: 2em;
+}
+
+.mini {
+  flex-basis: 10%;
+}
+
+.header-section {
+  display: flex;
+}
+
+header img {
+  height: 50px;
+}
+
+#home-header {
+  border-top: 3px solid var(--border-color);
+  border-radius: 10px 10px 0 0;
+}
+
+.header-title {
+  justify-content: left;
+  flex-basis: 75%;
+}

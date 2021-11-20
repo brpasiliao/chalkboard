@@ -1,0 +1,14 @@
+.main-margin {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: calc(var(--nav-height) + 10px);
+  /* background: lightpink; */
+}
+
+section {
+  border-right: 3px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
+  border-left: 3px solid var(--border-color);
+  border-radius: 0 0 10px 10px;
+}

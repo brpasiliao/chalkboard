@@ -1,0 +1,72 @@
+#course-nav {
+  display: flex;
+  /* background-color: var(--hover-color); */
+  border-radius: 10px 10px 0 0;
+}
+
+.course-tab {
+  flex-basis: 100%;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  margin: auto 0;
+  padding: 8px 5px 8px 5px;
+  border-bottom: 3px solid var(--border-color);
+  border-radius: 10px 10px 0 0;
+  transition: background 0.3s;
+}
+
+.course-tab img {
+  height: 35px;
+}
+
+.course-tab p {
+  margin: auto 0 auto 5px;
+}
+
+#contents-tab {
+  background: var(--inactive-red);
+}
+
+#instructors-tab {
+  background: var(--inactive-yellow);
+}
+
+#students-tab {
+  background: var(--inactive-blue);
+}
+
+.active-tab#contents-tab,
+#contents-tab:hover {
+  background: var(--active-red);
+}
+
+.active-tab#instructors-tab,
+#instructors-tab:hover {
+  background: var(--active-yellow);
+}
+
+.active-tab#students-tab,
+#students-tab:hover {
+  background: var(--active-blue);
+}
+
+.active-tab {
+  padding: 6px 5px 10px 5px;
+  border-left: 3px solid var(--border-color);
+  border-top: 3px solid var(--border-color);
+  border-right: 3px solid var(--border-color);
+  border-bottom: none;
+}
+
+.active-border {
+  position: absolute;
+  background: white;
+  /* border-bottom: 2px solid white; */
+  height: 3px;
+  width: 70%;
+  border-radius: 3px 3px 0 0;
+  left: 15%;
+  bottom: 0;
+  right: 15%;
+}
