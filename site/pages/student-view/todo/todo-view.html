@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Assignment 1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../../styles/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <a class="nav-section" href="../profile-user.html">
+        <img src="../../../images/userIcon.jpg" alt="User's profile picture" />
+        <p>User Name</p>
+      </a>
+      <a id="logo-section" class="nav-section" href="../home.html">
+        <img src="../../../images/chalkboardLogo.jpg" alt="Chalkboard logo" />
+      </a>
+      <div id="course-section" class="nav-section flex-last flex">
+        <label for="course-select"
+          >Courses:
+          <select id="course-select" name="coursesDropdown">
+            <option value="CRS 101">CRS 101</option>
+            <option value="CRS 102">CRS 102</option>
+          </select>
+        </label>
+        <img src="../../../images/infoIcon.jpg" alt="Search button" />
+      </div>
+    </nav>
+
+    <div class="main-margin">
+      <nav id="course-nav">
+        <a class="first-tab course-tab" href="materials.html">
+          <img src="../../../images/videoIcon.jpg" alt="Materials" />
+          <p>Materials</p>
+        </a>
+        <a class="active-tab second-tab course-tab" href="../todo/todo.html">
+          <div class="active-border"></div>
+          <img src="../../../images/todoIcon.jpg" alt="Instructors" />
+          <p>To Do</p>
+        </a>
+        <a class="third-tab course-tab" href="../completed/completed.html">
+          <img src="../../../images/doneIcon.jpg" alt="Students" />
+          <p>Completed</p>
+        </a>
+      </nav>
+
+      <header>
+        <div class="active-border"></div>
+        <a class="header-section mini" href="todo.html">
+          <img src="../../../images/backIcon.jpg" alt="Go back" />
+        </a>
+        <h1 class="header-title">Assignment1</h1>
+      </header>
+
+      <section id="todo-view" class="not-list">
+        <ol>
+          <li>
+            <label for="ans1"
+              >How many inches are there in a foot?
+              <input id="ans1" type="text" name="answers" value="12" />
+            </label>
+          </li>
+          <li>
+            <label for="ans2"
+              >How many centimeters are there in a meter?
+              <input id="ans2" type="text" name="answers" />
+            </label>
+          </li>
+          <li>
+            <label for="ans3"
+              >How many ounces are there in a pound?
+              <input id="ans3" type="text" name="answers" />
+            </label>
+          </li>
+        </ol>
+        <p>
+          <button class="logged-button" type="button" name="save">Save</button>
+          <button class="logged-button" type="button" name="submit">
+            Submit
+          </button>
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

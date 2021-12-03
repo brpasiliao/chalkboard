@@ -1,0 +1,109 @@
+h1 {
+  font-size: 5em;
+  margin: 0.25em 0 0;
+}
+
+#author {
+  font-size: 2.5em;
+  font-weight: normal;
+  margin: 0;
+}
+
+#unlogged-links {
+  justify-content: space-between;
+}
+
+.unlogged-buttons {
+  margin: 70px 0;
+  font-family: "Faraco Hand", "Chalkduster", fantasy;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.unlogged-buttons a {
+  padding: 20px;
+  flex-basis: 100%;
+  border: 2px solid var(--text-color);
+}
+
+button.unlogged-buttons {
+  padding: 20px;
+  width: 100%;
+  background-color: transparent;
+  color: inherit;
+  border: 2px solid var(--text-color);
+}
+
+.unlogged-buttons a:hover,
+button.unlogged-buttons:hover {
+  background: var(--hover-color);
+}
+
+.unlogged-buttons a:active,
+button.unlogged-buttons:active {
+  background: var(--selected-color);
+}
+
+#sign-up-form {
+  justify-content: space-between;
+}
+
+.unlogged-field {
+  width: 90%;
+  margin: 50px auto 0;
+}
+
+.unlogged-form {
+  flex-basis: 50%;
+}
+
+.unlogged-form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border: 1px solid var(--text-color);
+}
+
+.unlogged-form input::placeholder {
+  color: var(--hover-color);
+}
+
+.unlogged-form input:focus {
+  background: var(--selected-color);
+}
+
+.unlogged-radio {
+  flex-basis: 35%;
+  margin: auto 0;
+  text-align: center;
+}
+
+.unlogged-radio input {
+  display: none;
+}
+
+.unlogged-radio label {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  padding: 50px;
+  border: 1px solid var(--text-color);
+  transition: background 0.3s;
+}
+
+.unlogged-radio label:hover {
+  background: var(--hover-color);
+}
+
+.unlogged-radio input:checked + label {
+  background: var(--selected-color);
+}
+
+/* index - @450px, put sign up under */
+/* index - @800px, font size up */
+/* sign up - @700, put student/teacher under, make forms wider */

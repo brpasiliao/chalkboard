@@ -1,0 +1,28 @@
+{
+  "name": "chalkboard",
+  "version": "1.0.0",
+  "description": "By: Bian Pasiliao   Site is live at: https://brpasiliao.github.io/chalkboard/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brpasiliao/chalkboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brpasiliao/chalkboard/issues"
+  },
+  "homepage": "https://github.com/brpasiliao/chalkboard#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0"
+  }
+}
