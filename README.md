@@ -1,6 +1,6 @@
 # Chalkboard
 By: Bian Pasiliao  
-Site is live at: https://brpasiliao.github.io/chalkboard/
+Site is live at: https://chalkboard.brpasiliao.repl.co
 
 ## Technologies used:
 Front-end: HTML and CSS
