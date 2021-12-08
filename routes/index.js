@@ -1,6 +1,7 @@
 const express = require("express");
 
 const signUpRoute = require("./sign-up");
+const logInRoute = require("./log-in");
 
 const router = express.Router();
 
@@ -17,6 +18,7 @@ module.exports = (params) => {
   });
 
   router.use("/sign-up", signUpRoute(params));
+  router.use("/log-in", logInRoute(params));
 
   return router;
 };

@@ -1,6 +1,16 @@
 <div class="main-margin">
   <h1>Sign Up</h1>
 
+  <% if(locals.errors) { %>
+  <div>
+    <ul>
+      <% errors.forEach(function (error) { %>
+      <li><%= errors.msg %></li>
+      <% }) %>
+    </ul>
+  </div>
+  <% } %>
+
   <form method="POST" action="/sign-up">
     <div id="sign-up-form" class="unlogged-field flex">
       <div class="unlogged-form">
@@ -10,7 +20,7 @@
             <input
               id="first-name"
               type="text"
-              name="first-name"
+              name="firstName"
               placeholder="Firstname"
             />
           </label>
@@ -21,7 +31,7 @@
             <input
               id="last-name"
               type="text"
-              name="last-name"
+              name="lastName"
               placeholder="Lastname"
             />
           </label>
@@ -62,15 +72,17 @@
       </div>
 
       <div class="unlogged-radio">
-        <input id="student" type="radio" name="roles" value="student" />
+        <input id="student" type="radio" name="role" value="student" />
         <label for="student">I am a Student</label>
-        <input id="teacher" type="radio" name="roles" value="teacher" />
+        <input id="teacher" type="radio" name="role" value="teacher" />
         <label for="teacher">I am a Teacher</label>
       </div>
     </div>
 
-    <button type="submit" class="unlogged-buttons">
-      Sign Up for Chalkboard
-    </button>
+    <input
+      type="submit"
+      class="unlogged-buttons"
+      value="Sign Up for Chalkboard"
+    />
   </form>
 </div>

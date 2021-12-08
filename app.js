@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const cookieSession = require("cookie-session");
+const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
 const app = express();
 const routes = require("./routes");
@@ -7,7 +9,6 @@ const routes = require("./routes");
 app.set("trust proxy", 1);
 app.locals.siteName = "Chalkboard";
 
-const cookieSession = require("cookie-session");
 app.use(
   cookieSession({
     name: "session",
@@ -15,7 +16,7 @@ app.use(
   })
 );
 
-const bodyParser = require("body-parser");
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");

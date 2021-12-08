@@ -28,7 +28,8 @@ h1 {
   border: 2px solid var(--text-color);
 }
 
-button.unlogged-buttons {
+input[type="submit"].unlogged-buttons {
+  /* button.unlogged-buttons { */
   padding: 20px;
   width: 100%;
   background-color: transparent;
@@ -37,12 +38,14 @@ button.unlogged-buttons {
 }
 
 .unlogged-buttons a:hover,
-button.unlogged-buttons:hover {
+input[type="submit"].unlogged-buttons:hover {
+  /* button.unlogged-buttons:hover { */
   background: var(--hover-color);
 }
 
 .unlogged-buttons a:active,
-button.unlogged-buttons:active {
+input[type="submit"].unlogged-buttons:active {
+  /* button.unlogged-buttons:active { */
   background: var(--selected-color);
 }
 
