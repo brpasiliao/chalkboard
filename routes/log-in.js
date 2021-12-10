@@ -1,9 +1,6 @@
 const { request } = require("express");
 const express = require("express");
-const User = require("../models/user");
-
-// const { check, validationResult } = require("express-validator");
-
+const client = require("../db");
 const router = express.Router();
 
 module.exports = (params) => {
@@ -19,19 +16,27 @@ module.exports = (params) => {
   });
 
   router.post("/", (request, response) => {
-    User.findOne({ email: request.body.email }, (error, u) => {
-      if (u !== null) {
-        if (u.password == request.body.password) {
-          console.log("Logged in!");
-          return response.redirect("/log-in");
+    client.connect((err) => {
+      const users = client.db("cbdb").collection("users");
+
+      users.findOne({ email: request.body.email }, (error, u) => {
+        if (u !== null) {
+          if (u.password == request.body.password) {
+            console.log("Logged in!");
+            if (u.role == "student") {
+              return response.redirect("/pages/student-view/home.html");
+            } else {
+              return response.redirect("/pages/instructor-view/home.html");
+            }
+          } else {
+            console.log("Wrong password!");
+            return response.redirect("/log-in");
+          }
         } else {
-          console.log("Wrong password!");
+          console.log("User doesn't exist!");
           return response.redirect("/log-in");
         }
-      } else {
-        console.log("User doesn't exist!");
-        return response.redirect("/log-in");
-      }
+      });
     });
   });
 
