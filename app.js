@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
-const cookieSession = require("cookie-session");
+// const cookieSession = require("cookie-session");
+const session = require("express-session");
+const FileStore = require("session-file-store")(session);
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -10,11 +12,20 @@ app.set("trust proxy", 1);
 app.locals.siteName = "Chalkboard";
 
 app.use(
-  cookieSession({
-    name: "session",
-    keys: ["dfgsdgzsdewdGSGe", "sdgesSGSE"],
+  session({
+    store: new FileStore(),
+    secret: "sdlnfliwendksc",
+    resave: true,
+    saveUninitialized: true,
   })
 );
+
+// app.use(
+//   cookieSession({
+//     name: "session",
+//     keys: ["dfgsdgzsdewdGSGe", "sdgesSGSE"],
+//   })
+// );
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
