@@ -9,6 +9,7 @@ module.exports = (params) => {
     try {
       return response.render("layout", {
         pageTitle: "Sign Up",
+        nav: "none",
         template: "sign-up",
         // errors
       });
@@ -35,14 +36,14 @@ module.exports = (params) => {
         .isEmail()
         .normalizeEmail()
         .withMessage("A valid email address is required."),
-      check("password1")
-        .trim()
-        .escape()
-        .withMessage("Please input a password."),
-      check("message")
-        .trim()
-        .escape()
-        .withMessage("Please confirm your password."),
+      // check("password1")
+      //   .trim()
+      //   .escape()
+      //   .withMessage("Please input a password."),
+      // check("password2")
+      //   .trim()
+      //   .escape()
+      //   .withMessage("Please confirm your password."),
     ],
     (request, response, next) => {
       const errors = validationResult(request);

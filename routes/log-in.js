@@ -8,6 +8,7 @@ module.exports = (params) => {
     try {
       return response.render("layout", {
         pageTitle: "Log In",
+        nav: "none",
         template: "log-in",
       });
     } catch (err) {
@@ -20,20 +21,16 @@ module.exports = (params) => {
       const users = client.db("cbdb").collection("users");
 
       users.findOne({ email: request.body.email }, (error, u) => {
-        if (u !== null) {
-          if (u.password == request.body.password) {
-            console.log("Logged in!");
-            if (u.role == "student") {
-              return response.redirect("/pages/student-view/home.html");
-            } else {
-              return response.redirect("/pages/instructor-view/home.html");
-            }
+        if (u !== null && u.password == request.body.password) {
+          console.log("Logged in!");
+          if (u.role == "student") {
+            // return response.redirect("/pages/student-view/home.html");
+            return response.redirect("/home");
           } else {
-            console.log("Wrong password!");
-            return response.redirect("/log-in");
+            return response.redirect("/pages/instructor-view/home.html");
           }
         } else {
-          console.log("User doesn't exist!");
+          console.log("Wrong info!");
           return response.redirect("/log-in");
         }
       });
