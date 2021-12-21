@@ -1,0 +1,46 @@
+<div class="main-margin">
+  <%- include("./partials/tab3") %>
+
+  <header>
+    <div class="active-border"></div>
+    <h1>Students</h1>
+  </header>
+
+  <section id="students">
+    <% students.forEach(function (student, key) {%>
+    <div class="small">
+      <a class="flex" href="student-progress.html">
+        <img
+          src="../../../images/userIcon.jpg"
+          alt="Student's profile picture"
+        />
+        <h2>Student Name</h2>
+      </a>
+      <a href="../profile-student.html">
+        <img
+          src="../../../images/enrollmentRequest.jpg"
+          alt="Student's enrollment request"
+        />
+      </a>
+    </div>
+    <%})%>
+    <!-- <div class="small">
+      <a class="flex" href="student-progress.html">
+        <img
+          src="../../../images/userIcon.jpg"
+          alt="Student's profile picture"
+        />
+        <h2>Student Name</h2>
+      </a>
+    </div>
+    <div class="small">
+      <a class="flex" href="student-progress.html">
+        <img
+          src="../../../images/userIcon.jpg"
+          alt="Student's profile picture"
+        />
+        <h2>Student Name</h2>
+      </a>
+    </div> -->
+  </section>
+</div>

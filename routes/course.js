@@ -27,28 +27,33 @@ module.exports = (params) => {
                   users
                     .find({ email: { $in: c.instructors } })
                     .toArray((error, is) => {
-                      let template = request.params.tab;
-                      if (request.params.subtab)
-                        template = request.params.subtab;
-                      if (request.params.sub2tab)
-                        template = request.params.sub2tab;
+                      users
+                        .find({ email: { $in: c.students } })
+                        .toArray((error, ss) => {
+                          let template = request.params.tab;
+                          if (request.params.subtab)
+                            template = request.params.subtab;
+                          if (request.params.sub2tab)
+                            template = request.params.sub2tab;
 
-                      try {
-                        return response.render("layout", {
-                          pageTitle:
-                            request.params.course +
-                            "-" +
-                            request.params.section,
-                          nav: "course-nav",
-                          template: template,
-                          user: u,
-                          course: c,
-                          instructors: is,
-                          index: request.params.i,
+                          try {
+                            return response.render("layout", {
+                              pageTitle:
+                                request.params.course +
+                                "-" +
+                                request.params.section,
+                              nav: "course-nav",
+                              template: template,
+                              user: u,
+                              course: c,
+                              instructors: is,
+                              students: ss,
+                              index: request.params.i,
+                            });
+                          } catch (err) {
+                            return next(err);
+                          }
                         });
-                      } catch (err) {
-                        return next(err);
-                      }
                     });
                 }
               );
