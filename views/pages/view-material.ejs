@@ -1,0 +1,23 @@
+    <div class="main-margin">
+      <%- include("./partials/tab1") %>
+
+      <header>
+        <a class="header-section mini" href="/<%=pageTitle%>/content/materials">
+          <img src="/images/backIcon.jpg" alt="Go back" />
+        </a>
+        <div class="header-section">
+          <div class="active-border"></div>
+          <img src="/images/videoIcon.jpg" alt="View materials" />
+          <h1>Material Name</h1>
+        </div>
+        <a class="header-section mini flex-last href="materials.html">
+          <img src="/images/trashIcon.jpg" alt="Delete material" />
+        </a>
+      </header>
+
+      <section id="material-view" class="not-list">
+        <p><%=course.materials[index].materialFile%></p>
+      </section>
+    </div>
+  </body>
+</html>

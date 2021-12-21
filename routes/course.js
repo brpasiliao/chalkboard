@@ -5,7 +5,7 @@ const router = express.Router();
 
 module.exports = (params) => {
   router.get(
-    "/:course-:section/:tab/:subtab?/:sub2tab?",
+    "/:course-:section/:tab/:subtab?/:sub2tab?/:i?",
     (request, response, next) => {
       if (!request.session.user) {
         console.log("page to login");
@@ -36,6 +36,7 @@ module.exports = (params) => {
                       template: template,
                       user: u,
                       course: c,
+                      index: request.params.i,
                     });
                   } catch (err) {
                     return next(err);
