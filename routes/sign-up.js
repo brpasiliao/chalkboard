@@ -6,15 +6,19 @@ const router = express.Router();
 
 module.exports = (params) => {
   router.get("/", (request, response, next) => {
-    try {
-      return response.render("layout", {
-        pageTitle: "Sign Up",
-        nav: "none",
-        template: "sign-up",
-        // errors
-      });
-    } catch (err) {
-      return next(err);
+    if (!request.session.user) {
+      try {
+        return response.render("layout", {
+          pageTitle: "Sign Up",
+          nav: "none",
+          template: "sign-up",
+          // errors
+        });
+      } catch (err) {
+        return next(err);
+      }
+    } else {
+      response.redirect("/home");
     }
   });
 
@@ -50,7 +54,7 @@ module.exports = (params) => {
 
       if (!errors.isEmpty()) {
         console.log(errors);
-        return response.redirect("/sign-up");
+        response.redirect("/sign-up");
       } else {
         client.connect((err) => {
           const users = client.db("cbdb").collection("users");
@@ -66,13 +70,13 @@ module.exports = (params) => {
           users.findOne({ email: request.body.email }, (error, u) => {
             if (u !== null) {
               console.log("An account with this email already exists!");
-              return response.redirect("/sign-up");
+              response.redirect("/sign-up");
             } else {
               users.insertOne(user, function (err, res) {
                 if (err) throw err;
                 console.log("User saved!");
               });
-              return response.redirect("/");
+              response.redirect("/");
             }
           });
         });
