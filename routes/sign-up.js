@@ -65,7 +65,6 @@ module.exports = (params) => {
             password: request.body.password1,
             firstName: request.body.firstName,
             lastName: request.body.lastName,
-            courses: [],
           };
 
           users.findOne({ email: request.body.email }, (error, u) => {

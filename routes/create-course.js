@@ -37,16 +37,20 @@ module.exports = (params) => {
       const users = client.db("cbdb").collection("users");
 
       let course = {
-        course: request.body.course,
+        courseName: request.body.courseName,
         section: request.body.section,
         day: request.body.day,
         timeFrom: request.body.from,
         timeTo: request.body.to,
         description: request.body.description,
+        matarials: [],
+        assignments: [],
+        instructors: [request.session.user],
+        students: [],
       };
 
       courses.findOne(
-        { course: course.course, section: course.section },
+        { course: course.courseName, section: course.section },
         (error, c) => {
           if (c !== null) {
             console.log(
@@ -58,13 +62,7 @@ module.exports = (params) => {
               if (err) throw err;
               console.log("Course saved!");
             });
-            users.updateOne(
-              { email: request.session.user },
-              { $push: { courses: course } },
-              (err) => {
-                if (err) console.error(err);
-              }
-            );
+
             response.redirect("/home");
           }
         }

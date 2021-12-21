@@ -6,30 +6,19 @@
   </header>
 
   <section id="home">
-    <a class="large flex" href="content/content.html">
+    <% courses.forEach(function (course) {%>
+    <a
+      class="large flex"
+      href="home/<%=course.course%><%=course.section%>/content"
+    >
       <img src="../../images/courseIcon.jpg" alt="Course icon" />
       <div class="info">
-        <h2>CRS 101</h2>
-        <p>Section 1 (10001)</p>
-        <p>Mon/Wed 10:00AM-11:00PM</p>
+        <h2><%=course.courseName%></h2>
+        <p>Section <%=course.section%></p>
+        <p><%=course.day%> <%=course.timeFrom%>-<%=course.timeTo%></p>
       </div>
     </a>
-    <a class="large flex" href="content/content.html">
-      <img src="../../images/courseIcon.jpg" alt="Course icon" />
-      <div class="info">
-        <h2>CRS 101</h2>
-        <p>Section 2 (10002)</p>
-        <p>Mon/Wed 12:00PM-1:00PM</p>
-      </div>
-    </a>
-    <a class="large flex" href="content/content.html">
-      <img src="../../images/courseIcon.jpg" alt="Course icon" />
-      <div class="info">
-        <h2>CRS 102</h2>
-        <p>Section 1 (10003)</p>
-        <p>Tue/Thu 10:00AM-11:00PM</p>
-      </div>
-    </a>
+    <%})%>
     <a href="/log-out">
       <p>Log Out</p>
     </a>
