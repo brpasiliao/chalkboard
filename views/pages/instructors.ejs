@@ -1,0 +1,25 @@
+<div class="main-margin">
+  <%- include("./partials/tab2") %>
+
+  <header>
+    <div class="active-border"></div>
+    <div class="header-section">
+      <h1>Instructors</h1>
+    </div>
+    <div class="header-section mini">
+      <!-- TODO: search widget to find instructor -->
+      <img src="../../../images/addIcon.jpg" alt="Go back" />
+      <!-- TODO: make trash icons appear beside instructor name to remove -->
+      <img src="../../../images/trashIcon.jpg" alt="Delete material" />
+    </div>
+  </header>
+
+  <section id="instructors">
+    <% instructors.forEach(function (instructor, key) {%>
+    <a class="large" href="../profile-instructor.html">
+      <img src="/images/userIcon.jpg" alt="Instructor's profile picture" />
+      <h2 class="info"><%=instructor.firstName%> <%=instructor.lastName%></h2>
+    </a>
+    <%})%>
+  </section>
+</div>
