@@ -43,6 +43,9 @@ module.exports = (params) => {
                 return next(err);
               }
             });
+          } else {
+            console.log("home to admin");
+            response.redirect("/admin");
           }
         });
       });

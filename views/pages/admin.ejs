@@ -1,0 +1,17 @@
+<div class="main-margin">
+  <h1>Courses:</h1>
+
+  <% courses.forEach(function (course) {%>
+  <h2><%=course.courseName%> Section <%=course.section%></h2>
+  <h3>Instructors:</h3>
+
+  <% course.instructors.forEach(function (instructor) {%>
+  <p><%=instructor%></p>
+  <%})%>
+
+  <h3>Students:</h3>
+  <% course.students.forEach(function (student) {%>
+  <p><%=student%></p>
+  <%})%> <br />
+  <%})%>
+</div>
