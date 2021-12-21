@@ -5,6 +5,7 @@ const logInRoute = require("./log-in");
 const homeRoute = require("./home");
 const logOutRoute = require("./log-out");
 const createCourseRoute = require("./create-course");
+const courseRoute = require("./course");
 const router = express.Router();
 
 module.exports = (params) => {
@@ -30,6 +31,7 @@ module.exports = (params) => {
   router.use("/home", homeRoute(params));
   router.use("/log-out", logOutRoute(params));
   router.use("/create-course", createCourseRoute(params));
+  router.use("/", courseRoute(params));
 
   return router;
 };

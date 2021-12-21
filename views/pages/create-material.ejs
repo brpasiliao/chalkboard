@@ -1,0 +1,44 @@
+<div class="main-margin">
+  <%- include("./partials/tab1") %>
+
+  <header>
+    <div class="active-border"></div>
+    <a class="header-section" href="/<%=pageTitle%>/content/materials">
+      <img src="../../../images/backIcon.jpg" alt="Go back" />
+    </a>
+    <div class="header-section header-title">
+      <img src="../../../images/videoIcon.jpg" alt="View materials" />
+      <h1>Create a Material</h1>
+    </div>
+  </header>
+
+  <section id="material-create" class="not-list">
+    <form
+      method="POST"
+      action="/<%=pageTitle%>/content/materials/create-material"
+    >
+      <p>
+        <label for="filename"
+          >File name:
+          <input id="filename" type="text" name="fileName" />
+        </label>
+      </p>
+      <p>
+        <label for="file-category"
+          >File category:
+          <input id="file-category" type="text" name="fileCategory" />
+        </label>
+      </p>
+      <p>
+        <label for="upload"
+          >Upload file:
+          <input id="upload" type="file" name="fileUpload" />
+        </label>
+      </p>
+
+      <button class="logged-button" type="submit" name="button">
+        Create Material
+      </button>
+    </form>
+  </section>
+</div>

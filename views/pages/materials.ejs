@@ -1,0 +1,35 @@
+<div class="main-margin">
+  <%- include("./partials/tab1") %>
+
+  <header>
+    <div class="active-border"></div>
+    <a class="header-section mini" href="/<%=pageTitle%>/content">
+      <img src="../../../images/backIcon.jpg" alt="Go back" />
+    </a>
+    <div class="header-section">
+      <img src="../../../images/videoIcon.jpg" alt="View materials" />
+      <h1>Materials</h1>
+    </div>
+    <a
+      class="header-section mini flex-last"
+      href="/<%=pageTitle%>/content/materials/create-material"
+    >
+      <img src="../../../images/addIcon.jpg" alt="Add material" />
+    </a>
+  </header>
+
+  <section id="materials">
+    <% course.materials.forEach(function (material, key) {%>
+    <a
+      class="medium flex"
+      href="/<%=pageTitle%>/content/materials/<%=material.key%>"
+    >
+      <img src="../../../images/videoIcon.jpg" alt="Material" />
+      <div class="info">
+        <h2><%=material.materialName%></h2>
+        <p><%=material.materialCategory%></p>
+      </div>
+    </a>
+    <%})%>
+  </section>
+</div>

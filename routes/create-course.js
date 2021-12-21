@@ -43,7 +43,7 @@ module.exports = (params) => {
         timeFrom: request.body.from,
         timeTo: request.body.to,
         description: request.body.description,
-        matarials: [],
+        materials: [],
         assignments: [],
         instructors: [request.session.user],
         students: [],

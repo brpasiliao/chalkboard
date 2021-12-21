@@ -1,23 +1,5 @@
 <div class="main-margin">
-  <nav id="course-nav">
-    <a id="contents-tab" class="active-tab course-tab" href="content.html">
-      <div class="active-border"></div>
-      <img src="../../../images/contentIcon.jpg" alt="Contents" />
-      <p>Contents</p>
-    </a>
-    <a
-      id="instructors-tab"
-      class="course-tab"
-      href="../instructors/instructors.html"
-    >
-      <img src="../../../images/instructorIcon.jpg" alt="Instructors" />
-      <p>Instructors</p>
-    </a>
-    <a id="students-tab" class="course-tab" href="../students/students.html">
-      <img src="../../../images/studentIcon.jpg" alt="Students" />
-      <p>Students</p>
-    </a>
-  </nav>
+  <%- include("./partials/tab1") %>
 
   <header>
     <div class="active-border"></div>
@@ -25,17 +7,11 @@
   </header>
 
   <section id="content">
-    <a
-      class="largest flex"
-      href="home/<%=course.courseName%>-<%=course.section%>/materials"
-    >
+    <a class="largest flex" href="/<%=pageTitle%>/content/materials">
       <img src="../../../images/videoIcon.jpg" alt="Material" />
       <h2>Materials</h2>
     </a>
-    <a
-      class="largest flex"
-      href="home/<%=course.courseName%>-<%=course.section%>/assignments"
-    >
+    <a class="largest flex" href="/<%=pageTitle%>/content/assignments">
       <img src="../../../images/documentIcon.jpg" alt="Material" />
       <h2>Assignments</h2>
     </a>

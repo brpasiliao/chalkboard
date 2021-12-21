@@ -13,10 +13,7 @@ app.locals.siteName = "Chalkboard";
 
 app.use(
   session({
-    store: new FileStore({
-      minTimeout: 2000,
-      maxTimeout: 4000,
-    }),
+    store: new FileStore(),
     secret: "sdlnfliwendksc",
     resave: true,
     saveUninitialized: true,
