@@ -49,7 +49,7 @@ module.exports = (params) => {
     }
   });
 
-  router.get("/:course/:tab", (request, response, next) => {
+  router.get("/:course-:section/:tab", (request, response, next) => {
     if (!request.session.user) {
       console.log("page to login");
       response.redirect("/log-in");
@@ -58,15 +58,29 @@ module.exports = (params) => {
         const users = client.db("cbdb").collection("users");
 
         users.findOne({ email: request.session.user }, (error, u) => {
-          try {
-            return response.render("layout", {
-              pageTitle: "Home",
-              nav: "home-nav",
-              template: "home",
-              user: u,
-            });
-          } catch (err) {
-            return next(err);
+          const courses = client.db("cbdb").collection("courses");
+
+          if (u.role == "teacher") {
+            courses.findOne(
+              {
+                courseName: request.params.course,
+                section: request.params.section,
+              },
+              (error, c) => {
+                try {
+                  return response.render("layout", {
+                    pageTitle:
+                      request.params.course + "-" + request.params.section,
+                    nav: "content-nav",
+                    template: "content",
+                    user: u,
+                    course: c,
+                  });
+                } catch (err) {
+                  return next(err);
+                }
+              }
+            );
           }
         });
       });

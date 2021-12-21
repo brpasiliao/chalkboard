@@ -1,0 +1,19 @@
+<nav id="main-nav">
+  <a class="nav-section" href="profile-user.html">
+    <img src="../../images/userIcon.jpg" alt="User's profile picture" />
+    <p><%=user.firstName%> <%=user.lastName%></p>
+  </a>
+  <a id="logo-section" class="nav-section" href="/home">
+    <img src="../../images/chalkboardLogo.jpg" alt="Chalkboard logo" />
+  </a>
+  <div id="course-section" class="nav-section flex-last flex">
+    <label for="course-select"
+      >Courses:
+      <select id="course-select" name="coursesDropdown">
+        <option value="CRS 101">CRS 101</option>
+        <option value="CRS 102">CRS 102</option>
+      </select>
+    </label>
+    <img src="../../images/infoIcon.jpg" alt="Search button" />
+  </div>
+</nav>
