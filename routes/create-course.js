@@ -34,6 +34,7 @@ module.exports = (params) => {
   router.post("/", (request, response, next) => {
     client.connect((err) => {
       const courses = client.db("cbdb").collection("courses");
+      const users = client.db("cbdb").collection("users");
 
       let course = {
         course: request.body.course,
@@ -57,6 +58,13 @@ module.exports = (params) => {
               if (err) throw err;
               console.log("Course saved!");
             });
+            users.updateOne(
+              { email: request.session.user },
+              { $push: { courses: course } },
+              (err) => {
+                if (err) console.error(err);
+              }
+            );
             response.redirect("/home");
           }
         }
