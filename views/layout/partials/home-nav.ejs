@@ -12,8 +12,10 @@
       <input id="search" type="text" name="search" placeholder="CRS 101" />
     </label>
     <img src="../../images/searchIcon.jpg" alt="Search button" />
-    <a href="create-course.html"
+    <% if(user.role == "teacher"){ %>
+    <a href="/create-course"
       ><img src="../../images/addIcon.jpg" alt="Add course button"
     /></a>
+    <% } %>
   </div>
 </nav>

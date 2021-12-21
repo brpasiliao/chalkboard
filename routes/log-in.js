@@ -29,13 +29,7 @@ module.exports = (params) => {
         if (u !== null && u.password == request.body.password) {
           console.log("Logged in!");
           request.session.user = u.email;
-          // console.log(request.session.user);
-
-          if (u.role == "student") {
-            response.redirect("/home");
-          } else {
-            response.redirect("/pages/instructor-view/home.html");
-          }
+          response.redirect("/home");
         } else {
           console.log("Wrong info!");
           response.redirect("/log-in");
