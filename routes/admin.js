@@ -18,16 +18,19 @@ module.exports = (params) => {
             const courses = client.db("cbdb").collection("courses");
 
             courses.find({}).toArray((error, cs) => {
-              try {
-                return response.render("layout", {
-                  pageTitle: "Admin View",
-                  nav: "admin-nav",
-                  template: "admin",
-                  courses: cs,
-                });
-              } catch (err) {
-                return next(err);
-              }
+              users.find({}).toArray((error, us) => {
+                try {
+                  return response.render("layout", {
+                    pageTitle: "Admin View",
+                    nav: "admin-nav",
+                    template: "admin",
+                    courses: cs,
+                    users: us,
+                  });
+                } catch (err) {
+                  return next(err);
+                }
+              });
             });
           }
         });
