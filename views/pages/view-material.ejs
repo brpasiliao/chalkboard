@@ -1,6 +1,7 @@
     <div class="main-margin">
       <%- include("./partials/tab1") %>
-
+      <!-- space -->
+      <% if(user.role == "teacher"){ %>
       <header>
         <a class="header-section mini" href="/<%=pageTitle%>/content/materials">
           <img src="/images/backIcon.jpg" alt="Go back" />
@@ -10,10 +11,21 @@
           <img src="/images/videoIcon.jpg" alt="View materials" />
           <h1>Material Name</h1>
         </div>
-        <a class="header-section mini flex-last href="materials.html">
+        <a class="header-section mini flex-last" href="/<%=pageTitle%>/content/materials">
           <img src="/images/trashIcon.jpg" alt="Delete material" />
         </a>
       </header>
+      <% } else { %>
+      <header>
+        <a class="header-section mini" href="/<%=pageTitle%>/materials">
+          <img src="/images/backIcon.jpg" alt="Go back" />
+        </a>
+        <div class="header-section header-title">
+          <img src="/images/videoIcon.jpg" alt="View materials" />
+          <h1>Material Name</h1>
+        </div>
+      </header>
+      <% } %>
 
       <section id="material-view" class="not-list">
         <p><%=course.materials[index].materialFile%></p>

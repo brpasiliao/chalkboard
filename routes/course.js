@@ -16,14 +16,13 @@ module.exports = (params) => {
 
           users.findOne({ email: request.session.user }, (error, u) => {
             const courses = client.db("cbdb").collection("courses");
-
-            if (u.role == "teacher") {
-              courses.findOne(
-                {
-                  courseName: request.params.course,
-                  section: request.params.section,
-                },
-                (error, c) => {
+            courses.findOne(
+              {
+                courseName: request.params.course,
+                section: request.params.section,
+              },
+              (error, c) => {
+                if (u.role == "teacher") {
                   users
                     .find({ email: { $in: c.instructors } })
                     .toArray((error, is) => {
@@ -55,9 +54,27 @@ module.exports = (params) => {
                           }
                         });
                     });
+                } else if (u.role == "student") {
+                  let template = request.params.tab;
+                  if (request.params.subtab) template = request.params.subtab;
+                  if (request.params.sub2tab) template = request.params.sub2tab;
+
+                  try {
+                    return response.render("layout", {
+                      pageTitle:
+                        request.params.course + "-" + request.params.section,
+                      nav: "course-nav",
+                      template: template,
+                      user: u,
+                      course: c,
+                      index: request.params.i,
+                    });
+                  } catch (err) {
+                    return next(err);
+                  }
                 }
-              );
-            }
+              }
+            );
           });
         });
       }

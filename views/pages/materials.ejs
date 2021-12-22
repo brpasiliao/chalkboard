@@ -1,6 +1,7 @@
 <div class="main-margin">
   <%- include("./partials/tab1") %>
-
+  <!-- space -->
+  <% if(user.role == "teacher"){ %>
   <header>
     <div class="active-border"></div>
     <a class="header-section mini" href="/<%=pageTitle%>/content">
@@ -17,12 +18,24 @@
       <img src="/images/addIcon.jpg" alt="Add material" />
     </a>
   </header>
+  <% } else { %>
+  <header>
+    <div class="active-border"></div>
+    <div class="header-section">
+      <h1>Materials</h1>
+    </div>
+  </header>
+  <% } %>
 
   <section id="materials">
     <% course.materials.forEach(function (material, key) {%>
     <a
       class="medium flex"
+      <% if(user.role == "teacher"){ %>
       href="/<%=pageTitle%>/content/materials/view-material/<%=key%>"
+      <% } else { %>
+      href="/<%=pageTitle%>/materials/-/view-material/<%=key%>"
+      <% } %>
     >
       <img src="/images/videoIcon.jpg" alt="Material" />
       <div class="info">

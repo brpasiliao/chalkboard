@@ -1,4 +1,5 @@
 <nav id="course-nav">
+  <% if(user.role == "teacher"){ %>
   <a
     id="contents-tab"
     class="active-tab course-tab"
@@ -8,12 +9,35 @@
     <img src="/images/contentIcon.jpg" alt="Contents" />
     <p>Contents</p>
   </a>
+  <% } else { %>
+  <a class="active-tab first-tab course-tab" href="/<%=pageTitle%>/info">
+    <div class="active-border"></div>
+    <img src="/images/videoIcon.jpg" alt="Materials" />
+    <p>Materials</p>
+  </a>
+  <% } %>
+  <!-- space -->
+  <% if(user.role == "teacher"){ %>
   <a id="instructors-tab" class="course-tab" href="/<%=pageTitle%>/instructors">
     <img src="/images/instructorIcon.jpg" alt="Instructors" />
     <p>Instructors</p>
   </a>
-  <a id="students-tab" class="course-tab" href="./<%=pageTitle%>/students">
+  <% } else { %>
+  <a class="second-tab course-tab" href="/<%=pageTitle%>/todo">
+    <img src="/images/todoIcon.jpg" alt="To Do" />
+    <p>To Do</p>
+  </a>
+  <% } %>
+  <!-- space -->
+  <% if(user.role == "teacher"){ %>
+  <a id="students-tab" class="course-tab" href="/<%=pageTitle%>/students">
     <img src="/images/studentIcon.jpg" alt="Students" />
     <p>Students</p>
   </a>
+  <% } else { %>
+  <a class="third-tab course-tab" href="/<%=pageTitle%>/completed">
+    <img src="/images/doneIcon.jpg" alt="Completed" />
+    <p>Completed</p>
+  </a>
+  <% } %>
 </nav>

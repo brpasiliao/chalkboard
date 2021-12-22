@@ -11,7 +11,6 @@ module.exports = (params) => {
     } else {
       client.connect((err) => {
         const users = client.db("cbdb").collection("users");
-
         users.findOne({ email: request.session.user }, (error, u) => {
           const courses = client.db("cbdb").collection("courses");
 

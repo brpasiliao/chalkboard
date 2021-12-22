@@ -9,7 +9,12 @@
     <% courses.forEach(function (course) {%>
     <a
       class="large flex"
-      href="/<%=course.courseName%>-<%=course.section%>/content"
+      <% if(user.role == "teacher"){ %>
+        href="/<%=course.courseName%>-<%=course.section%>/content"
+      <% } else { %>  
+        href="/<%=course.courseName%>-<%=course.section%>/materials"
+     <% } %>
+      
     >
       <img src="/images/courseIcon.jpg" alt="Course icon" />
       <div class="info">
