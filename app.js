@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 // const cookieSession = require("cookie-session");
@@ -14,7 +16,7 @@ app.locals.siteName = "Chalkboard";
 app.use(
   session({
     store: new FileStore(),
-    secret: "sdlnfliwendksc",
+    secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
   })

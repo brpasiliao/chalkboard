@@ -1,6 +1,6 @@
-const MongoClient = require("mongodb").MongoClient;
-const uri = `mongodb+srv://admin:admin@chalkboardcluster.jiuia.mongodb.net/cbdb?retryWrites=true&w=majority`;
+require("dotenv").config();
+const { MongoClient } = require("mongodb");
 
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(process.env.MONGO_URI);
 
 module.exports = client;
