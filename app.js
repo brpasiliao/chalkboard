@@ -6,7 +6,7 @@ const session = require("express-session");
 const PORT = process.env.PORT || 3000;
 const app = express();
 const routes = require("./routes");
-const MongoStore = require("connect-mongo");
+const MongoStore = require("connect-mongo").default;
 
 
 app.set("trust proxy", 1);
